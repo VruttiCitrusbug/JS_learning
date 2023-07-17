@@ -50,6 +50,25 @@
         </div>
     </div>
     <div class="row">
+      <div class="col">
+          DOB:
+              <input oninput = "validdate()" type="date" name="date" id="date">
+      </div>
+      <div id="dateerr" class="err d-none"></div>
+    </div>
+    <div class="row">
+      <div class="col">
+          Database:
+          <select oninput="validdatabase()" name="database" id="database" multiple>
+            <option value="mongodb">MongoDB</option>
+            <option value="postgre">PostgreSQL</option>
+            <option value="sql">SQL</option>
+            <option value="sqlite">SQLite</option>
+          </select>
+      </div>
+      <div id="databaseerr" class="err d-none"></div>
+    </div>
+    <div class="row">
         <div class="col">
             Gender:
             <label class="radio-inline" onclick="validgender()">

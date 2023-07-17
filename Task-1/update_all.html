@@ -13,7 +13,7 @@
 <body>
 
 <div class="container mt-3">
-  <h2>Registration form</h2>
+  <h2>Update form</h2>
   <form onSubmit="return false;" action="">
     <div class="row">
         <div class="col-md-6">
@@ -23,8 +23,9 @@
                 <input type="text" onkeyup="validname()" class="form-control" id="name" placeholder="Enter Your Name" name="name">
                 <div id="nameerr" class="err d-none">gvashdga adfhasjkfgajkf asdkjasgdfasjk</div>
               </div>
-
-            </div>
+              
+              <!-- valid-feedback -->
+        </div>
         <div class="col-md-6">
 
             <div class="mb-3 mt-3">
@@ -79,15 +80,16 @@
         </div>
         <div id="gendererr" class="err d-none"></div>
     </div>
+    
     <div class="row">
-        <div class="col">
-            <div class="mb-3">
-                <label for="phno">Phone number:</label>
-                <input type="tel" onkeyup="validphno()" class="form-control" id="phno" placeholder="Enter Phonenumber" name="phno">
-                <div id="phnoerr" class="err d-none"></div>
-              </div>
-        </div>
-    </div>
+      <div class="col">
+          <div class="mb-3">
+              <label for="phno">Phone number:</label>
+              <input type="tel" onkeyup="validphno()" class="form-control" id="phno" placeholder="Enter Phonenumber" name="phno">
+              <div id="phnoerr" class="err d-none"></div>
+            </div>
+      </div>
+  </div>
     <div class="row">
         <div class="col">Language:</div>
     <div class="row">
@@ -105,12 +107,15 @@
 
     <div class="row">
         <div class="col-sm-3">
-            <button onclick="submitfrm()" type="submit" id="sub" class="btn btn-primary">Submit</button>
+            <button type="submit" id="index" onclick="index1()" class="d-none btn btn-primary">Submit</button>
+            <button id="pre" class="btn btn-primary">Previous</button>
+            <button id="next" class="btn btn-primary">Next</button>
         </div>
     </div>
     
   </form>
   <script src="form_validate.js"></script>
+  <script src="update_individual.js"></script>
 </div>
 
 </body>
